@@ -1,0 +1,20 @@
+.container{
+  height: 100%;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.nameContainer{
+  color: red;
+  font-weight: 500;
+}
+
+.buttonContainer{
+  border: 1px solid #ffff;
+  padding: 5%;
+}

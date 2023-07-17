@@ -5,6 +5,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.14.0",
     "@mui/material": "^5.14.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,7 +14,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.38",
-    "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^18.2.15",
     "sass": "^1.63.6"
   }
 }

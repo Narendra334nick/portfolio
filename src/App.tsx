@@ -4,6 +4,9 @@ import ErrorPage from './containers/Core/Error';
 import {
   createBrowserRouter,
   RouterProvider,
+  Routes,
+  Route,
+  HashRouter
 } from "react-router-dom";
 import Layout from './containers/Layout/Layout';
 
@@ -24,7 +27,13 @@ function App() {
   return (
     <div className="App">
       {/* <LandingPage /> */}
-      <RouterProvider router={router} />
+      <HashRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}/> {/* 👈 Renders at /#/app/ */}
+        <Route path="/layout" element={<Layout />}/> {/* 👈 Renders at /#/app/ */}
+      </Routes>
+      </HashRouter>
+      {/* <RouterProvider router={router} /> */}
     </div>
   );
 }

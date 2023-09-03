@@ -1,0 +1,13 @@
+{
+  "projects":[
+    {
+      "name" : "Campus Hiring(c2c)",
+      "description":"A unified system for onboarding campus and students.",
+      "link":"https://c2c.vega-hr.com",
+      "imageUrl":"",
+      "Company":"",
+      "techStack":"",
+      "seconddryTechStack":""
+    }
+  ]
+}

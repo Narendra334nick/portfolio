@@ -17,19 +17,21 @@ export default function ProjectCard(props: ProjectCardPropType) {
 				<img
 					src={url}
 					alt="Project Img"
-					style={{ height: 350, width: 350 }}
+					className={classes["image"]}
 					onClick={handleClick}
 				/>
 				<div className={classes["overlay"]}>
 					<div className={classes["overlay-text"]}>
 						<div className={classes["techStack"]}>{techStack}</div>
+						<div className={classes["name"]}>{name && name}</div>
+						<div className={classes["description"]}>
+							{description && description.slice(0, 50)}
+						</div>
 						<div onClick={handleClick} className={classes["learnMore"]}>
 							LEARN MORE
 						</div>
 					</div>
 				</div>
-				<div>{name && name}</div>
-				<div>{description && description}</div>
 			</div>
 		</div>
 	);

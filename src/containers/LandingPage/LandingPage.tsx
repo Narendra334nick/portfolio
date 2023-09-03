@@ -2,18 +2,19 @@ import classes from "../LandingPage/LandingPage.module.scss";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import filler from "../../assets/backgrounds/filler.png";
 
 export default function LandingPage() {
 	const navigate = useNavigate();
 	const viewMyWorks = () => {
 		navigate("/layout/portfolio");
 	};
-	const myBackground = "http://findmatthew.com/style/../img/filler.png";
+	// const myBackground = "http://findmatthew.com/style/../img/filler.png";
 	return (
 		<div
 			className={classes["container"]}
 			style={{
-				backgroundImage: `url(${myBackground})`,
+				backgroundImage: `url(${filler})`,
 			}}
 		>
 			<Box p={1}>

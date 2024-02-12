@@ -16,7 +16,7 @@ export default function Header() {
 				className={classes["subRoot"]}
 				onClick={() => navigation("/layout/portfolio")}
 			>
-				Portfolio
+				My Work
 			</div>
 			<div
 				className={classes["subRoot"]}

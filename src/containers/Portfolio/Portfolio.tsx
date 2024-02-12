@@ -20,7 +20,7 @@ export default function Portfolio() {
 	return (
 		<div style={{ padding: "0% 2% 0% 2%" }}>
 			<Box fontSize={26} fontWeight={600} pb={2}>
-				<u>Projects</u>
+				{/* <u>Projects</u> */}
 			</Box>
 			<Box>
 				<Grid container spacing={2}>

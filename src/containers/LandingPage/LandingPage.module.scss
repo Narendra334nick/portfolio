@@ -19,8 +19,10 @@
   border-radius: 5px;
   padding: 5px 5%;
   cursor: pointer;
+  transition: color 0.5s,border-color 0.5s;
 }
 
 .buttonContainer:hover{
-  background-color: #00000000;
+  color: red;
+  border: 1px solid red;
 }

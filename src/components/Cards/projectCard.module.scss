@@ -10,6 +10,12 @@
   cursor: pointer;
   position: relative;
   display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.imageConainer:hover {
+  transform: scale(1.2);
+  /* Zoom effect */
 }
 
 .image {
@@ -69,3 +75,4 @@
 .description{
   padding: 8px 0px;
 }
+

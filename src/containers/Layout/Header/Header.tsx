@@ -24,12 +24,12 @@ export default function Header() {
 			>
 				About
 			</div>
-			<div
+			{/* <div
 				className={classes["subRoot"]}
 				onClick={() => navigation("/layout/contact")}
 			>
 				Contact
-			</div>
+			</div> */}
 		</div>
 	);
 }

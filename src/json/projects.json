@@ -1,31 +1,40 @@
 {
-  "projects":[
-    {
-      "name" : "Campus Hiring (c2c)",
-      "description":"A unified system for onboarding campus and students.",
-      "projectLink":"https://c2c.vega-hr.com",
-      "imageUrl":"",
-      "Company":"Polestar Solutions & Services",
-      "techStack":"ReactJS / NodeJS",
-      "seconddryTechStack":"HTML, CSS, Javascript, typescript, ReactJS, NodeJS, Express JS, Mysql"
-    },
-    {
-      "name" : "VegaHr (HRMS System)",
-      "description":"Recruitment & Hiring, Employee Portal, Workflows, Timesheets. A fully organized hrms system ",
-      "projectLink":"https://workfore.vega-hr.com",
-      "imageUrl":"",
-      "Company":"Polestar Solutions & Services",
-      "techStack":"NodeJS / Mysql",
-      "seconddryTechStack":"Javascript, typescript, NodeJS, Express JS, Mysql"
-    },
-    {
-      "name" : "Movie Search",
-      "description":"A system for searching movies / tv shows etc",
-      "projectLink":"https://narendra334nick.github.io/GSIV23_Narendra_Pratap/",
-      "imageUrl":"",
-      "Company":"Self",
-      "techStack":"ReactJS",
-      "seconddryTechStack":"HTML, CSS, Javascript, typescript, ReactJS"
-    }
-  ]
+	"projects": [
+		{
+			"name": "Campus Hiring (c2c)",
+			"description": "A unified system for onboarding campus and students.",
+			"projectLink": "https://c2c.vega-hr.com",
+			"imageUrl": "",
+			"Company": "Polestar Solutions & Services",
+			"techStack": "ReactJS / NodeJS",
+			"seconddryTechStack": "HTML, CSS, Javascript, typescript, ReactJS, NodeJS, Express JS, Mysql"
+		},
+		{
+			"name": "VegaHr (HRMS System)",
+			"description": "Recruitment & Hiring, Employee Portal, Workflows, Timesheets. A fully organized hrms system ",
+			"projectLink": "https://workfore.vega-hr.com",
+			"imageUrl": "",
+			"Company": "Polestar Solutions & Services",
+			"techStack": "NodeJS / Mysql",
+			"seconddryTechStack": "Javascript, typescript, NodeJS, Express JS, Mysql"
+		},
+		{
+			"name": "Movie Search",
+			"description": "A system for searching movies / tv shows etc",
+			"projectLink": "https://narendra334nick.github.io/GSIV23_Narendra_Pratap/",
+			"imageUrl": "",
+			"Company": "Self",
+			"techStack": "ReactJS",
+			"seconddryTechStack": "HTML, CSS, Javascript, typescript, ReactJS"
+		},
+		{
+			"name": "Portfolio",
+			"description": "A simple portfolio to showcase my skills",
+			"projectLink": "https://narendra334nick.github.io/portfolio/",
+			"imageUrl": "",
+			"Company": "Self",
+			"techStack": "ReactJS",
+			"seconddryTechStack": "HTML, CSS, Javascript, typescript, ReactJS"
+		}
+	]
 }

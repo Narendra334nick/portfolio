@@ -6,6 +6,7 @@ import projects from "../../json/projects.json";
 import c2c from "../../assets/projectImages/c2c.png";
 import vega from "../../assets/projectImages/vega.png";
 import movie from "../../assets/projectImages/movie.png";
+import portfolio from "../../assets/projectImages/portfolio.png";
 
 export default function Portfolio() {
 	const [data, setData] = React.useState<any>([]);
@@ -14,6 +15,7 @@ export default function Portfolio() {
 		projects.projects[0].imageUrl = c2c;
 		projects.projects[1].imageUrl = vega;
 		projects.projects[2].imageUrl = movie;
+		projects.projects[3].imageUrl = portfolio;
 		setData(projects.projects);
 	}, []);
 
@@ -23,7 +25,7 @@ export default function Portfolio() {
 				{/* <u>Projects</u> */}
 			</Box>
 			<Box>
-				<Grid container spacing={2}>
+				<Grid container spacing={3}>
 					{data.map((item: any) => {
 						return (
 							<Grid item xs={12} sm={6} md={4} lg={4}>

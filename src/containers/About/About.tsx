@@ -17,37 +17,37 @@ export default function About(props: any) {
 			skillName: "Javascript",
 			icon: JavaScriptLogo,
 			rating: 4,
-			exp: "4+",
+			exp: "4+ years",
 		},
 		{
 			skillName: "ReactJS",
 			icon: ReactLogo,
 			rating: 4,
-			exp: "4+",
+			exp: "4+ years",
 		},
 		{
 			skillName: "NodeJS",
 			icon: NodeJSLogo,
 			rating: 4,
-			exp: "4+",
+			exp: "4+ years",
 		},
 		{
 			skillName: "Typescript",
 			icon: TypeScriptLogo,
 			rating: 4,
-			exp: "4+",
+			exp: "4+ years",
 		},
 		{
 			skillName: "Mysql",
 			icon: MySqlLogo,
 			rating: 4,
-			exp: "4+",
+			exp: "4+ years",
 		},
 		{
 			skillName: "NextJS",
 			icon: NextJsLogo,
 			rating: 3,
-			exp: "4+",
+			exp: "4+ years",
 		},
 	];
 	return (
@@ -56,6 +56,13 @@ export default function About(props: any) {
 				<Grid item xs={12} sm={6} md={4} lg={4}>
 					<div className={classes[`left-header`]}>
 						<h2>About Me</h2>
+						<h3>
+							<Box style={{ textAlign: "right" }}>Narendra Pratap Singh</Box>
+							<Box style={{ textAlign: "right" }}>
+								npratapsingh999@gmail.com
+							</Box>
+							<Box style={{ textAlign: "right" }}>8439723546</Box>
+						</h3>
 					</div>
 				</Grid>
 				<Grid item xs={12} sm={6} md={8} lg={8}>

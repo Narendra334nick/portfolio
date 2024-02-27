@@ -21,7 +21,7 @@ export default function Portfolio() {
 
 	return (
 		<div style={{ padding: "0% 2% 0% 2%" }}>
-			<Box fontSize={26} fontWeight={600} pb={2}>
+			<Box fontSize={26} fontWeight={600} pb={2} pt={1}>
 				{/* <u>Projects</u> */}
 			</Box>
 			<Box>

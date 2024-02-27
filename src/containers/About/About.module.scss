@@ -20,6 +20,10 @@
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('https://source.unsplash.com/4kkYkFNfJV8/706x900');
   background-size: cover;
   padding: 4rem;
+  display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .left-header::before {

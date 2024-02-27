@@ -9,6 +9,7 @@ import JavaScriptLogo from "../../assets/generalImages/JavaScript-logo.png";
 import NodeJSLogo from "../../assets/generalImages/node-js-icon-454x512-nztofx17.png";
 import TypeScriptLogo from "../../assets/generalImages/typescript.png";
 import MySqlLogo from "../../assets/generalImages/Database-mysql.svg.png";
+import NextJsLogo from "../../assets/generalImages/nextjs.png";
 
 export default function About(props: any) {
 	const skillArray: any = [
@@ -16,26 +17,37 @@ export default function About(props: any) {
 			skillName: "Javascript",
 			icon: JavaScriptLogo,
 			rating: 4,
+			exp: "4+",
 		},
 		{
 			skillName: "ReactJS",
 			icon: ReactLogo,
 			rating: 4,
+			exp: "4+",
 		},
 		{
 			skillName: "NodeJS",
 			icon: NodeJSLogo,
 			rating: 4,
+			exp: "4+",
 		},
 		{
 			skillName: "Typescript",
 			icon: TypeScriptLogo,
 			rating: 4,
+			exp: "4+",
 		},
 		{
 			skillName: "Mysql",
 			icon: MySqlLogo,
 			rating: 4,
+			exp: "4+",
+		},
+		{
+			skillName: "NextJS",
+			icon: NextJsLogo,
+			rating: 3,
+			exp: "4+",
 		},
 	];
 	return (
@@ -63,22 +75,27 @@ export default function About(props: any) {
 							alignItems={"center"}
 							justifyContent={"flex-start"}
 						>
-							<p>
-								"Hello, <b>I'm Narendra,</b> a passionate and dedicated
-								professional with a deep interest in technology and innovation.
-								With a background in <b>ReactJS,NodeJD,MySql</b>. I thrive in
-								dynamic environments where creativity and problem-solving are
-								key. Whether it's developing cutting-edge software solutions,
-								crafting compelling content, or driving strategic initiatives, I
-								approach each challenge with enthusiasm and a commitment to
-								excellence. My journey in [Your Field] has equipped me with a
-								diverse skill set, including [mention any relevant skills or
-								expertise], which I leverage to deliver impactful results. I am
-								excited about the opportunity to [mention what you're looking
-								forward to, such as collaborating on new projects, contributing
-								to a team, etc.]. Let's connect and explore how we can work
-								together to achieve our goals."
-							</p>
+							<Box textAlign={"left"}>
+								"Hello, I'm <b>Narendra,</b> a passionate and dedicated
+								professional with a profound interest in technology and
+								innovation. With a solid background in ReactJS, Node.js, and
+								MySQL, I thrive in dynamic environments where creativity and
+								problem-solving are paramount. Whether it's developing
+								cutting-edge software solutions, crafting compelling content, or
+								driving strategic initiatives, I approach each challenge with
+								enthusiasm and a commitment to excellence.
+								<Box>
+									My journey in Software Engineering has equipped me with a
+									diverse skill set encompassing HTML, CSS, ReactJS, Node.js,
+									JavaScript, TypeScript, MySQL, and MongoDB. I leverage these
+									skills to deliver impactful results and drive projects
+									forward. I am particularly excited about exploring
+									technologies like Docker, CI/CD, and more, to further enhance
+									my expertise and contribute to innovative solutions.
+								</Box>{" "}
+								Let's connect and explore how we can collaborate to achieve our
+								goals together."
+							</Box>
 						</Grid>
 					</Grid>
 					<h2>Key Skills</h2>
@@ -90,6 +107,7 @@ export default function About(props: any) {
 										skillName={item.skillName}
 										icon={item.icon}
 										rating={item.rating}
+										exp={item.exp}
 									/>
 								</Grid>
 							);

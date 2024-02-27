@@ -8,7 +8,7 @@ export default function Layout() {
 	return (
 		<div style={{ background: "white", height: "100%" }}>
 			<Header />
-			<div style={{ color: "black", marginTop: "5%" }}>
+			<div style={{ color: "black", marginTop: "4%" }}>
 				<Routes>
 					<Route path="/about" element={<About />} />
 					<Route path="/portfolio" element={<Portfolio />} />

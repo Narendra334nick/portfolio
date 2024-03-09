@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 7%;
+  height: 6%;
   background: #252934;
   z-index: 12000;
 }
@@ -21,8 +21,8 @@
 
 .subRoot:hover{
   color: red;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 400;
   transition: 0.5s;
 }
 
@@ -30,7 +30,7 @@
   margin: 1% 3% 1% 0%;
   cursor: pointer;
   color: red;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   transition: 0.5s;
 }

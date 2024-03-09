@@ -68,6 +68,7 @@ export default function About(props: any) {
 				<Grid item xs={12} sm={6} md={8} lg={8}>
 					<Grid container spacing={1}>
 						<Grid item xs={12} sm={3} md={3} lg={3}>
+							{/* <div></div> */}
 							<div className={classes[`imageContainer`]}>
 								<img src={profile} height={"100%"} width={"100%"} />
 							</div>

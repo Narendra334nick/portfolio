@@ -1,26 +1,39 @@
-.root{
+.root {
   text-align: left;
-  max-width: 500px;
-  max-height: 350px;
-  //padding: 8px;
-  //background-color: #252934;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin: 0; // Remove margin
+  box-sizing: border-box; // Add this to include padding in width calculation
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: #eb4560;
+  }
 }
 
-.imageConainer{
+.imageConainer {
   cursor: pointer;
   position: relative;
-  display: inline-block;
-  transition: transform 0.3s ease;
+  display: block;
+  width: 100%;
+  padding-bottom: 66.67%; // Maintains 3:2 aspect ratio
+  overflow: hidden;
 }
 
-// .imageConainer:hover {
-//   transform: scale(1.2);
-//   /* Zoom effect */
-// }
-
 .image {
-  height: 350px;
-  width: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
@@ -39,6 +52,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 16px;
 }
 
 .overlay:hover {
@@ -46,33 +60,54 @@
   /* Show the overlay on hover */
 }
 
-.techStack{
-  margin: 8px 0px;
-  padding: 8px 0px;
-  font-size: 22px;
+.techStack {
+  margin: 12px 0;
+  padding: 8px 16px;
+  font-size: 18px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
 }
 
-.learnMore{
+.learnMore {
   border: 1px solid rgb(235, 69, 96);
   border-radius: 3px;
-  padding: 8px;
+  padding: 10px 20px;
   text-align: center;
   transition: background-color 0.3s ease;
+  margin: 16px 0 8px;
+
+  @media (max-width: 600px) {
+    padding: 8px 16px;
+  }
 }
 
-.learnMore:hover{
+.learnMore:hover {
   background-color: rgb(235, 69, 96);
   color: white;
   //transition: 3ms ease-in-out;
 }
 
-.name{
-  font-size: 16px;
+.name {
+  font-size: 18px;
   font-weight: 600;
-  padding: 8px 0px;
+  padding: 16px 16px 8px;
+  color: #333;
 }
 
-.description{
-  padding: 8px 0px;
-}
+.description {
+  padding: 8px 16px;
+  color: #666;
+  line-height: 1.5;
+  word-wrap: break-word; // Add this to wrap long text
+  overflow-wrap: break-word; // Add this for better text wrapping
 
+  @media (max-width: 600px) {
+    font-size: 14px;
+    padding: 8px 12px; // Reduce padding on mobile
+  }
+}

@@ -21,34 +21,63 @@ export default function Portfolio() {
 	}, []);
 
 	return (
-		<div style={{ padding: "0% 2% 0% 2%" }}>
-			<Box fontSize={26} fontWeight={600} pb={2} pt={1}>
+		<Box sx={{
+			padding: { xs: "16px", sm: "24px", md: "32px" },
+			marginTop: "24px",
+			width: "100%",
+			overflow: "hidden" // Add this to prevent horizontal scroll
+		}}>
+			<Box
+				fontSize={{ xs: 24, sm: 26 }}
+				fontWeight={600}
+				pb={3}
+				pt={1}
+			>
 				<h3>Projects</h3>
 				<Divider />
 			</Box>
-			<Box display={"flex"} justifyContent={"center"}>
+
+			<Box
+				display="flex"
+				justifyContent="center"
+				sx={{
+					width: "100%",
+					maxWidth: "100vw" // Ensure content doesn't exceed viewport width
+				}}
+			>
 				<Grid
 					container
-					spacing={0}
-					width={"80%"}
-					display={"flex"}
-					justifyContent={"center"}
+					spacing={{ xs: 2, sm: 2.5, md: 3 }} // Reduced spacing
+					sx={{
+						width: "100%",
+						margin: "0",
+						padding: "0 8px" // Add some padding on the sides
+					}}
 				>
-					{data.map((item: any) => {
-						return (
-							<Grid item xs={12} sm={6} md={4} lg={4}>
-								<ProjectCard
-									url={item.imageUrl ? item.imageUrl : url}
-									name={item.name}
-									link={item.projectLink}
-									description={item.description}
-									techStack={item.techStack}
-								/>
-							</Grid>
-						);
-					})}
+					{data.map((item: any, index: number) => (
+						<Grid
+							item
+							xs={12}
+							sm={6}
+							md={4}
+							key={index}
+							sx={{
+								display: "flex",
+								justifyContent: "center",
+								width: "100%", // Added width
+							}}
+						>
+							<ProjectCard
+								url={item.imageUrl ? item.imageUrl : url}
+								name={item.name}
+								link={item.projectLink}
+								description={item.description}
+								techStack={item.techStack}
+							/>
+						</Grid>
+					))}
 				</Grid>
 			</Box>
-		</div>
+		</Box>
 	);
 }

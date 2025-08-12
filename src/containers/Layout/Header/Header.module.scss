@@ -1,8 +1,7 @@
-.root{
+.root {
   display: flex;
   justify-content: flex-start;
-  border-bottom:3px solid #0fbadd;
-  //box-shadow: 4px 4px 4px 4px #1c2335;
+  border-bottom: 3px solid #0fbadd;
   padding-left: 10%;
   position: fixed;
   top: 0;
@@ -10,16 +9,22 @@
   height: 6%;
   background: #252934;
   z-index: 12000;
+
+  @media (max-width: 600px) {
+    justify-content: space-between;
+    padding: 0 16px;
+    padding-left: 16px;
+  }
 }
 
-.subRoot{
+.subRoot {
   margin: 1% 3% 1% 0%;
   cursor: pointer;
   font-size: 20px;
   font-weight: 400;
 }
 
-.subRoot:hover{
+.subRoot:hover {
   color: red;
   font-size: 22px;
   font-weight: 400;

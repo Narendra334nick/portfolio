@@ -3,7 +3,7 @@ import profile from "../../assets/generalImages/dp.jpeg";
 import classes from "../About/About.module.scss";
 import { Grid } from "@mui/material";
 import SkillCards from "../../components/Cards/skillCards";
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import ReactLogo from "../../assets/generalImages/react2.png";
 import JavaScriptLogo from "../../assets/generalImages/JavaScript-logo.png";
 import NodeJSLogo from "../../assets/generalImages/node-js-icon-454x512-nztofx17.png";
@@ -52,26 +52,50 @@ export default function About(props: any) {
 	];
 	return (
 		<div className={classes[`root`]}>
-			<Grid container spacing={1}>
-				<Grid item xs={12} sm={6} md={8} lg={8}>
-					<Grid container spacing={1}>
-						<Grid item xs={12} sm={3} md={3} lg={3}>
-							{/* <div></div> */}
-							<div className={classes[`imageContainer`]}>
-								<img src={profile} height={"100%"} width={"100%"} />
-							</div>
-						</Grid>
+			<Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
+				{/* Main content grid */}
+				<Grid item xs={12} md={8}>
+					{/* Profile and Bio section */}
+					<Grid
+						container
+						spacing={{ xs: 2, sm: 3 }}
+						alignItems="center"
+					>
+						{/* Profile Image */}
 						<Grid
 							item
 							xs={12}
-							sm={9}
-							md={9}
-							lg={9}
-							display={"flex"}
-							alignItems={"center"}
-							justifyContent={"flex-start"}
+							sm={4}
+							md={3}
+							sx={{
+								display: "flex",
+								justifyContent: { xs: "center", sm: "flex-start" },
+							}}
 						>
-							<Box textAlign={"left"}>
+							<div className={classes[`imageContainer`]}>
+								<img
+									src={profile}
+									alt="Profile"
+									style={{
+										width: "100%",
+										height: "100%",
+										objectFit: "cover",
+									}}
+								/>
+							</div>
+						</Grid>
+
+						{/* Bio Text */}
+						<Grid item xs={12} sm={8} md={9}>
+							<Box
+								sx={{
+									textAlign: { xs: "center", sm: "left" },
+									padding: { xs: "16px", sm: "0" },
+									fontSize: { xs: "0.9rem", sm: "1rem" },
+									color: "text.primary",
+									"& b": { fontWeight: 600 },
+								}}
+							>
 								"Hello, I'm <b>Narendra,</b> a passionate and dedicated
 								professional with a profound interest in technology and
 								innovation. With a solid background in ReactJS, Node.js, and
@@ -94,11 +118,47 @@ export default function About(props: any) {
 							</Box>
 						</Grid>
 					</Grid>
-					<h2>Key Skills</h2>
-					<Grid container spacing={1}>
-						{skillArray.map((item: any) => {
-							return (
-								<Grid item xs={12} sm={6} md={6} lg={6}>
+
+					{/* Skills Section */}
+					<Box sx={{ mt: { xs: 4, sm: 5 } }}>
+						<Box
+							component="h2"
+							sx={{
+								mb: 3,
+								fontSize: { xs: "1.5rem", sm: "1.75rem" },
+								textAlign: { xs: "center", sm: "left" },
+								fontWeight: 600,
+								background: 'linear-gradient(90deg, #FF0000, #0066FF, #FFA500, #FF69B4, #00FF00)',
+								backgroundSize: '200% auto',
+								backgroundClip: 'text',
+								WebkitBackgroundClip: 'text',
+								color: 'transparent',
+								textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
+								letterSpacing: '0.5px',
+								animation: 'gradient 5s linear infinite',
+								'@keyframes gradient': {
+									'0%': {
+										backgroundPosition: '0% center'
+									},
+									'100%': {
+										backgroundPosition: '200% center'
+									}
+								}
+							}}
+						>
+							Key Skills
+						</Box>
+						<Grid
+							container
+							spacing={{ xs: 2, sm: 2.5, md: 3 }}
+						>
+							{skillArray.map((item: any, index: number) => (
+								<Grid
+									item
+									xs={12}
+									sm={6}
+									key={index}
+								>
 									<SkillCards
 										skillName={item.skillName}
 										icon={item.icon}
@@ -106,19 +166,32 @@ export default function About(props: any) {
 										exp={item.exp}
 									/>
 								</Grid>
-							);
-						})}
-					</Grid>
+							))}
+						</Grid>
+					</Box>
 				</Grid>
-				<Grid item xs={12} sm={6} md={4} lg={4}>
+
+				{/* Right Sidebar */}
+				<Grid
+					item
+					xs={12}
+					md={4}
+					sx={{
+						display: { xs: "none", md: "block" }, // Hide on mobile and tablet
+					}}
+				>
 					<div className={classes[`left-header`]}>
 						<h2>About Me</h2>
 						<h3>
-							<Box style={{ textAlign: "right" }}>Narendra Pratap Singh</Box>
-							<Box style={{ textAlign: "right" }}>
+							<Box sx={{ textAlign: "right" }}>
+								Narendra Pratap Singh
+							</Box>
+							<Box sx={{ textAlign: "right" }}>
 								npratapsingh999@gmail.com
 							</Box>
-							<Box style={{ textAlign: "right" }}>8439723546</Box>
+							<Box sx={{ textAlign: "right" }}>
+								8439723546
+							</Box>
 						</h3>
 					</div>
 				</Grid>

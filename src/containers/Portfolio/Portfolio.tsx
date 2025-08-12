@@ -25,17 +25,36 @@ export default function Portfolio() {
 			padding: { xs: "16px", sm: "24px", md: "32px" },
 			marginTop: "24px",
 			width: "100%",
-			overflow: "hidden" // Add this to prevent horizontal scroll
+			overflow: "hidden"
 		}}>
 			<Box
-				fontSize={{ xs: 24, sm: 26 }}
-				fontWeight={600}
-				pb={3}
-				pt={1}
+				component="h3"
+				sx={{
+					fontSize: { xs: 24, sm: 26 },
+					fontWeight: 600,
+					pb: 3,
+					pt: 1,
+					background: 'linear-gradient(90deg, #FF0000, #0066FF, #FFA500, #FF69B4, #00FF00)',
+					backgroundSize: '200% auto',
+					backgroundClip: 'text',
+					WebkitBackgroundClip: 'text',
+					color: 'transparent',
+					textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
+					letterSpacing: '0.5px',
+					animation: 'gradient 5s linear infinite',
+					'@keyframes gradient': {
+						'0%': {
+							backgroundPosition: '0% center'
+						},
+						'100%': {
+							backgroundPosition: '200% center'
+						}
+					}
+				}}
 			>
-				<h3>Projects</h3>
-				<Divider />
+				Projects
 			</Box>
+			<Divider />
 
 			<Box
 				display="flex"

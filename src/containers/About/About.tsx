@@ -53,18 +53,6 @@ export default function About(props: any) {
 	return (
 		<div className={classes[`root`]}>
 			<Grid container spacing={1}>
-				<Grid item xs={12} sm={6} md={4} lg={4}>
-					<div className={classes[`left-header`]}>
-						<h2>About Me</h2>
-						<h3>
-							<Box style={{ textAlign: "right" }}>Narendra Pratap Singh</Box>
-							<Box style={{ textAlign: "right" }}>
-								npratapsingh999@gmail.com
-							</Box>
-							<Box style={{ textAlign: "right" }}>8439723546</Box>
-						</h3>
-					</div>
-				</Grid>
 				<Grid item xs={12} sm={6} md={8} lg={8}>
 					<Grid container spacing={1}>
 						<Grid item xs={12} sm={3} md={3} lg={3}>
@@ -121,6 +109,18 @@ export default function About(props: any) {
 							);
 						})}
 					</Grid>
+				</Grid>
+				<Grid item xs={12} sm={6} md={4} lg={4}>
+					<div className={classes[`left-header`]}>
+						<h2>About Me</h2>
+						<h3>
+							<Box style={{ textAlign: "right" }}>Narendra Pratap Singh</Box>
+							<Box style={{ textAlign: "right" }}>
+								npratapsingh999@gmail.com
+							</Box>
+							<Box style={{ textAlign: "right" }}>8439723546</Box>
+						</h3>
+					</div>
 				</Grid>
 			</Grid>
 		</div>

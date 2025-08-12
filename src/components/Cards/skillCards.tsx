@@ -1,8 +1,7 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import classes from "./skillCards.module.scss";
 import StarRateIcon from "@mui/icons-material/StarRate";
-import Box from "@mui/material/Box";
 import { yellow } from "@mui/material/colors";
 
 const SkillCards = (props: any) => {
@@ -22,24 +21,70 @@ const SkillCards = (props: any) => {
 	};
 
 	return (
-		<div className={classes["root"]}>
-			<Grid container spacing={2} p={1}>
-				<Grid sm={2} md={2} lg={2} p={2}>
-					<img src={props.icon} width={80} height={80} alt="picture" />
-				</Grid>
-				<Grid sm={10} md={10} lg={10} textAlign={"left"}>
-					<Box display="flex" justifyContent="space-between">
-						<h3>
-							<b>{skillName}</b>
-						</h3>
-						<h3>{exp}</h3>
-					</Box>
-					<Box>
-						<MyComponent rating={rating} />
-					</Box>
-				</Grid>
-			</Grid>
-		</div>
+		<Card
+			sx={{
+				display: "flex",
+				p: 2,
+				height: "100%",
+				minHeight: "120px",
+				boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+				"&:hover": {
+					boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
+					transform: "translateY(-2px)",
+				},
+				transition: "all 0.3s ease",
+			}}
+		>
+			<Box
+				sx={{
+					display: "flex",
+					alignItems: "center",
+					width: "30%",
+					justifyContent: "center",
+				}}
+			>
+				<img
+					src={props.icon}
+					alt={props.skillName}
+					style={{
+						width: "60px",
+						height: "60px",
+						objectFit: "contain",
+					}}
+				/>
+			</Box>
+
+			<CardContent
+				sx={{
+					flex: "1",
+					p: "8px !important",
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+				}}
+			>
+				<Typography
+					variant="h6"
+					sx={{
+						fontSize: { xs: "1rem", sm: "1.1rem" },
+						fontWeight: 600,
+						mb: 1,
+					}}
+				>
+					{props.skillName}
+				</Typography>
+
+				<Typography
+					variant="body2"
+					color="text.secondary"
+					sx={{
+						fontSize: { xs: "0.8rem", sm: "0.9rem" },
+					}}
+				>
+					Experience: {props.exp}
+				</Typography>
+			</CardContent>
+		</Card>
 	);
 };
 export default SkillCards;

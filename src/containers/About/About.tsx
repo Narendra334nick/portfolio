@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/generalImages/narendra.jpeg";
+import profile from "../../assets/generalImages/dp.jpeg";
 import classes from "../About/About.module.scss";
 import { Grid } from "@mui/material";
 import SkillCards from "../../components/Cards/skillCards";

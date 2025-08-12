@@ -1,4 +1,4 @@
-.container{
+.container {
   height: 100%;
   text-align: center;
   margin: 0px 0px 0px 0px;
@@ -9,20 +9,20 @@
   font-weight: 200;
 }
 
-.nameContainer{
+.nameContainer {
   color: red;
   font-weight: 500;
 }
 
-.buttonContainer{
+.buttonContainer {
   border: 1px solid #ffff;
   border-radius: 5px;
   padding: 5px 5%;
   cursor: pointer;
-  transition: color 0.5s,border-color 0.5s;
+  transition: color 0.5s, border-color 0.5s;
 }
 
-.buttonContainer:hover{
+.buttonContainer:hover {
   color: red;
   border: 1px solid red;
 }

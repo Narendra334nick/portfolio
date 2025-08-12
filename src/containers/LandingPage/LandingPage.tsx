@@ -9,7 +9,7 @@ export default function LandingPage() {
 	const viewMyWorks = () => {
 		navigate("/layout/portfolio");
 	};
-	// const myBackground = "http://findmatthew.com/style/../img/filler.png";
+
 	return (
 		<div
 			className={classes["container"]}
@@ -20,9 +20,30 @@ export default function LandingPage() {
 			<Box p={1}>
 				<Box p={1}>
 					Hello, I'm{" "}
-					<span className={classes["nameContainer"]}>
+					<Box
+						component="span"
+						fontWeight="bold"
+						sx={{
+							background:
+								"linear-gradient(90deg, #FF0000, #0066FF, #FFA500, #FF69B4, #00FF00)",
+							backgroundSize: "200% auto",
+							backgroundClip: "text",
+							WebkitBackgroundClip: "text",
+							color: "transparent",
+							textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+							animation: "gradient 5s linear infinite",
+							"@keyframes gradient": {
+								"0%": {
+									backgroundPosition: "0% center",
+								},
+								"100%": {
+									backgroundPosition: "200% center",
+								},
+							},
+						}}
+					>
 						Narendra Pratap Singh
-					</span>
+					</Box>
 					.
 				</Box>
 				<Box p={1}>I'm a fullstack web-developer.</Box>

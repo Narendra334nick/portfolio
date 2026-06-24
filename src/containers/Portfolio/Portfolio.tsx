@@ -27,34 +27,32 @@ export default function Portfolio() {
 			width: "100%",
 			overflow: "hidden"
 		}}>
-			<Box
+			{/* <Box
 				component="h3"
 				sx={{
-					fontSize: { xs: 24, sm: 26 },
-					fontWeight: 600,
+					fontSize: { xs: 28, sm: 34 },
+					fontWeight: 800,
 					pb: 3,
 					pt: 1,
-					background: 'linear-gradient(90deg, #FF0000, #0066FF, #FFA500, #FF69B4, #00FF00)',
-					backgroundSize: '200% auto',
+					textAlign: 'center',
+					background: 'linear-gradient(135deg, #667eea, #764ba2, #eb4560, #f093fb, #4facfe, #667eea)',
+					backgroundSize: '300% auto',
 					backgroundClip: 'text',
 					WebkitBackgroundClip: 'text',
 					color: 'transparent',
-					textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-					letterSpacing: '0.5px',
-					animation: 'gradient 5s linear infinite',
-					'@keyframes gradient': {
-						'0%': {
-							backgroundPosition: '0% center'
-						},
-						'100%': {
-							backgroundPosition: '200% center'
-						}
+					letterSpacing: '2px',
+					textTransform: 'uppercase',
+					animation: 'gradientShift 5s ease infinite',
+					'@keyframes gradientShift': {
+						'0%':   { backgroundPosition: '0% 50%' },
+						'50%':  { backgroundPosition: '100% 50%' },
+						'100%': { backgroundPosition: '0% 50%' },
 					}
 				}}
 			>
 				Projects
 			</Box>
-			<Divider />
+			<Divider /> */}
 
 			<Box
 				display="flex"

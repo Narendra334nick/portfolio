@@ -13,24 +13,37 @@ export default function ProjectCard(props: ProjectCardPropType) {
 	};
 	return (
 		<div className={classes["root"]}>
-			<div className={classes["imageConainer"]}>
-				<img
-					src={url}
-					alt="Project Img"
-					className={classes["image"]}
-					onClick={handleClick}
-				/>
-				<div className={classes["overlay"]}>
-					<div className={classes["overlay-text"]}>
-						<div className={classes["techStack"]}>{techStack}</div>
-						<div className={classes["name"]}>{name && name}</div>
-						<div className={classes["description"]}>
-							{description && description.slice(0, 50)}
-						</div>
-						<div onClick={handleClick} className={classes["learnMore"]}>
-							LEARN MORE
+			<div className={classes["inner"]}>
+				<div className={classes["imageConainer"]}>
+					<img
+						src={url}
+						alt="Project Img"
+						className={classes["image"]}
+						onClick={handleClick}
+					/>
+					<div className={classes["overlay"]}>
+						<div className={classes["overlay-text"]}>
+							{techStack && (
+								<div className={classes["techStack"]}>{techStack}</div>
+							)}
+							<div className={classes["name"]}>{name}</div>
+							{description && (
+								<div className={classes["description"]}>
+									{description.slice(0, 80)}
+								</div>
+							)}
+							<div onClick={handleClick} className={classes["learnMore"]}>
+								Learn More
+							</div>
 						</div>
 					</div>
+				</div>
+
+				<div className={classes["cardFooter"]}>
+					<div className={classes["footerName"]}>{name}</div>
+					{techStack && (
+						<div className={classes["footerTech"]}>{techStack}</div>
+					)}
 				</div>
 			</div>
 		</div>

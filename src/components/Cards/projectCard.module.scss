@@ -1,21 +1,38 @@
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
+}
+
 .root {
-  text-align: left;
   width: 100%;
-  height: 100%;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  margin: 0; // Remove margin
-  box-sizing: border-box; // Add this to include padding in width calculation
+  position: relative;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #eb4560, #f093fb, #4facfe, #667eea);
+  background-size: 400% 400%;
+  animation: gradientShift 5s ease infinite;
+  box-shadow: 0 4px 24px rgba(102, 126, 234, 0.35);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    border-color: #eb4560;
+    transform: translateY(-10px) scale(1.015);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.55), 0 0 0 1px rgba(240, 147, 251, 0.3);
   }
+}
+
+.inner {
+  background: #10101e;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .imageConainer {
@@ -23,7 +40,7 @@
   position: relative;
   display: block;
   width: 100%;
-  padding-bottom: 66.67%; // Maintains 3:2 aspect ratio
+  padding-bottom: 62%;
   overflow: hidden;
 }
 
@@ -34,6 +51,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .imageConainer:hover & {
+    transform: scale(1.08);
+  }
 }
 
 .overlay {
@@ -42,72 +64,135 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* White overlay with opacity */
+  background: linear-gradient(
+    145deg,
+    rgba(102, 126, 234, 0.93) 0%,
+    rgba(118, 75, 162, 0.9) 40%,
+    rgba(235, 69, 96, 0.9) 100%
+  );
   opacity: 0;
-  /* Initially transparent */
-  transition: opacity 0.3s ease;
-  /* Add a smooth transition effect */
+  transition: opacity 0.4s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 20px;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.overlay:hover {
-  opacity: 1;
-  /* Show the overlay on hover */
+/* shimmer stripe inside overlay */
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  animation: shimmer 2.2s infinite;
+  pointer-events: none;
+}
+
+.overlay-text {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .techStack {
-  margin: 12px 0;
-  padding: 8px 16px;
-  font-size: 18px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px 14px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(6px);
+  word-break: break-word;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.65;
+  margin-bottom: 20px;
 
   @media (max-width: 600px) {
-    font-size: 16px;
-    padding: 6px 12px;
+    font-size: 12px;
   }
 }
 
 .learnMore {
-  border: 1px solid rgb(235, 69, 96);
-  border-radius: 3px;
-  padding: 10px 20px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-  margin: 16px 0 8px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  padding: 9px 28px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+
+  &:hover {
+    background: #fff;
+    color: #667eea;
+    transform: scale(1.06);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.35);
+  }
 
   @media (max-width: 600px) {
-    padding: 8px 16px;
+    padding: 8px 20px;
   }
 }
 
-.learnMore:hover {
-  background-color: rgb(235, 69, 96);
-  color: white;
-  //transition: 3ms ease-in-out;
+.cardFooter {
+  padding: 16px 18px 18px;
+  background: #10101e;
+  flex: 1;
 }
 
-.name {
-  font-size: 18px;
-  font-weight: 600;
-  padding: 16px 16px 8px;
-  color: #333;
+.footerName {
+  font-size: 15px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #667eea, #f093fb, #eb4560);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+  margin-bottom: 5px;
 }
 
-.description {
-  padding: 8px 16px;
-  color: #666;
-  line-height: 1.5;
-  word-wrap: break-word; // Add this to wrap long text
-  overflow-wrap: break-word; // Add this for better text wrapping
-
-  @media (max-width: 600px) {
-    font-size: 14px;
-    padding: 8px 12px; // Reduce padding on mobile
-  }
+.footerTech {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.5px;
 }

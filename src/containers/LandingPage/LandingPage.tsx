@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "../LandingPage/LandingPage.module.scss";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Box } from "@mui/material";
@@ -13,9 +14,9 @@ export default function LandingPage() {
 	return (
 		<div
 			className={classes["container"]}
-			style={{
-				backgroundImage: `url(${filler})`,
-			}}
+			style={
+				{ "--bg-image": `url(${filler})` } as React.CSSProperties
+			}
 		>
 			<Box p={1}>
 				<Box p={1}>

@@ -7,6 +7,35 @@
   align-items: center;
   font-size: 32px;
   font-weight: 200;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  animation: rotateBg 60s linear infinite;
+  z-index: 0;
+}
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotateBg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .nameContainer {
@@ -15,14 +44,44 @@
 }
 
 .buttonContainer {
-  border: 1px solid #ffff;
+  border: none;
   border-radius: 5px;
   padding: 5px 5%;
   cursor: pointer;
-  transition: color 0.5s, border-color 0.5s;
+  position: relative;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b, #f7971e, #ffd200, #56ab2f, #0575e6, #a855f7);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.5s;
+  animation: gradientShift 4s linear infinite;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+    padding: 1px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b, #f7971e, #ffd200, #56ab2f, #0575e6, #a855f7);
+    background-size: 300% auto;
+    animation: gradientShift 4s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 }
 
 .buttonContainer:hover {
-  color: red;
-  border: 1px solid red;
+  background-position: right center;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
 }

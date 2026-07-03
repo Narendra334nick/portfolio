@@ -1,0 +1,91 @@
+{
+	"certificates": [
+		{
+			"title": "Certificate of completion: Claude 101",
+			"issuer": "Anthropic",
+			"issuedDate": "Issued Jun 2026",
+			"credentialId": "gvuvgwk7fmyw",
+			"badge": "A",
+			"badgeColor": "anthropic"
+		},
+		{
+			"title": "Certificate of Completion: AI Fluency Framework & Foundations",
+			"issuer": "Anthropic",
+			"issuedDate": "Issued Jun 2026",
+			"credentialId": "q6drx6fjvbwq",
+			"badge": "A",
+			"badgeColor": "anthropic"
+		},
+		{
+			"title": "AWS Certified Cloud Practitioner",
+			"issuer": "Amazon Web Services (AWS)",
+			"issuedDate": "Issued Aug 2025",
+			"expiryDate": "Expires Aug 2028",
+			"skills": ["Amazon Web Services (AWS)", "Cloud Computing"],
+			"badge": "aws",
+			"badgeColor": "aws"
+		},
+		{
+			"title": "AWS Certified Cloud Practitioner (CLF-C02) Cert Prep: 4 Billing, Pricing, And Support",
+			"issuer": "LinkedIn",
+			"issuedDate": "Issued Mar 2025",
+			"skills": ["Cloud Governance"],
+			"badge": "in",
+			"badgeColor": "linkedin"
+		},
+		{
+			"title": "AWS Certified Cloud Practitioner (CLF-C02) Cert Prep: 3 Cloud Technology and Services",
+			"issuer": "LinkedIn",
+			"issuedDate": "Issued Feb 2025",
+			"badge": "in",
+			"badgeColor": "linkedin"
+		},
+		{
+			"title": "AWS Certified Cloud Practitioner (CLF-C02) Cert Prep: 2 Security and Compliance",
+			"issuer": "LinkedIn",
+			"issuedDate": "Issued Jan 2025",
+			"skills": ["Cloud Administration", "Security Compliance"],
+			"badge": "in",
+			"badgeColor": "linkedin"
+		},
+		{
+			"title": "AWS Certified Cloud Practitioner (CLF-C02) Cert Prep: 1 Cloud Concepts",
+			"issuer": "LinkedIn",
+			"issuedDate": "Issued Jan 2025",
+			"skills": ["Cloud Computing", "Amazon Web Services (AWS)"],
+			"badge": "in",
+			"badgeColor": "linkedin"
+		},
+		{
+			"title": "Python (Intermediate)",
+			"issuer": "HackerRank",
+			"issuedDate": "Issued Sep 2020",
+			"credentialId": "794d0c1c5469",
+			"badge": "HR",
+			"badgeColor": "hackerrank"
+		},
+		{
+			"title": "Problem Solving (Basic)",
+			"issuer": "HackerRank",
+			"issuedDate": "Issued Sep 2020",
+			"credentialId": "Problem Solving (Basic)",
+			"badge": "HR",
+			"badgeColor": "hackerrank"
+		},
+		{
+			"title": "Python Data Structures",
+			"issuer": "Coursera",
+			"issuedDate": "Issued Jul 2019",
+			"credentialId": "QQEZ3FD6J63F",
+			"badge": "C",
+			"badgeColor": "coursera"
+		},
+		{
+			"title": "Programming for Everybody (Getting Started with Python)",
+			"issuer": "Coursera",
+			"issuedDate": "Issued Jun 2019",
+			"badge": "C",
+			"badgeColor": "coursera"
+		}
+	]
+}

@@ -1,0 +1,138 @@
+.root {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.15);
+  border-radius: 14px;
+  height: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 600px) {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
+.logoWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+
+  @media (max-width: 600px) {
+    width: 42px;
+    height: 42px;
+    font-size: 0.95rem;
+  }
+}
+
+.anthropic {
+  background: #0d0d0d;
+}
+
+.aws {
+  background: #232f3e;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.hackerrank {
+  background: #111;
+  color: #2ec866;
+}
+
+.coursera {
+  background: #0056d2;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #22223a;
+  line-height: 1.35;
+
+  @media (max-width: 600px) {
+    font-size: 0.92rem;
+  }
+}
+
+.subTitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-top: 4px;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #7a7a95;
+  margin-top: 4px;
+}
+
+.credentialBtn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 18px;
+  border: 1px solid #22223a;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #22223a;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: #22223a;
+    color: #fff;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.skills {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.skillsLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #22223a;
+  margin-right: 2px;
+}
+
+.skillTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.35);
+  border-radius: 20px;
+  padding: 3px 10px;
+}

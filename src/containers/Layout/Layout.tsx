@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Contact from "../Contact/Contact";
 import Portfolio from "../Portfolio/Portfolio";
 import About from "../About/About";
+import Certificates from "../Certificates/Certificates";
+import Experience from "../Experience/Experience";
 
 export default function Layout() {
 	return (
@@ -12,6 +14,8 @@ export default function Layout() {
 				<Routes>
 					<Route path="/about" element={<About />} />
 					<Route path="/portfolio" element={<Portfolio />} />
+					<Route path="/certificates" element={<Certificates />} />
+					<Route path="/experience" element={<Experience />} />
 					{/* <Route path="/layout" element={<Contact />}> */}
 					<Route path="/contact" element={<Contact />}></Route>
 				</Routes>

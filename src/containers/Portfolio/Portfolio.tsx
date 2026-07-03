@@ -7,7 +7,6 @@ import c2c from "../../assets/projectImages/c2c.png";
 import vega from "../../assets/projectImages/vega.png";
 import movie from "../../assets/projectImages/movie.png";
 import portfolio from "../../assets/projectImages/portfolio.png";
-import Divider from "@mui/material/Divider";
 
 export default function Portfolio() {
 	const [data, setData] = React.useState<Array<any>>([]);

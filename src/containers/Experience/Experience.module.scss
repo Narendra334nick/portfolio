@@ -1,0 +1,44 @@
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.root {
+  margin-top: 7vh;
+  min-height: 93vh;
+  padding: 0 16px 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(102, 126, 234, 0.1);
+  padding: 32px;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #eb4560, #f093fb, #4facfe, #667eea);
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
+  }
+}

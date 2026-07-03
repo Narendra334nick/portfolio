@@ -1,12 +1,16 @@
 .root {
   display: flex;
-  gap: 18px;
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.15);
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.15);
+  border-radius: 14px;
+  height: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 
-  &:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  &:hover {
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
   }
 }
 

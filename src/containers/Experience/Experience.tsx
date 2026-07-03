@@ -6,7 +6,7 @@ export default function Experience() {
 	return (
 		<div className={classes["root"]}>
 			<div className={classes["panel"]}>
-				<div className={classes["heading"]}>Experience</div>
+				{/* <div className={classes["heading"]}>Experience</div> */}
 				{experience.experience.map((item, index) => (
 					<ExperienceCard
 						key={index}

@@ -5,14 +5,39 @@
 			"company": "EPAM Systems",
 			"employmentType": "Full-time",
 			"duration": "Jun 2024 - Present · 2 yrs 2 mos",
-			"location": "Gurugram, Haryana, India · Remote"
+			"location": "Gurugram, Haryana, India · Remote",
+			"skills": [
+				"Webpack",
+				"Node.js",
+				"ReactJS",
+				"TypeScript",
+				"MySQL",
+				"Express JS",
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"MongoDB",
+				"AWS"
+			]
 		},
 		{
 			"role": "Consultant",
 			"company": "Xumane - ESOP & Cap Table Mgmt.",
 			"employmentType": "Full-time",
 			"duration": "Nov 2023 - Jun 2024 · 8 mos",
-			"location": "Noida, Uttar Pradesh, India · On-site"
+			"location": "Noida, Uttar Pradesh, India · On-site",
+			"skills": [
+				"Webpack",
+				"Node.js",
+				"ReactJS",
+				"TypeScript",
+				"MySQL",
+				"Express JS",
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"MongoDB"
+			]
 		},
 		{
 			"role": "Senior Analyst",
@@ -23,7 +48,18 @@
 			"bullets": [
 				"Work with developers to design algorithms and flowcharts."
 			],
-			"skills": ["Webpack", "Node.js", "ReactJS", "TypeScript", "MySQL", "Express JS", "HTML", "CSS", "JavaScript", "MongoDB"]
+			"skills": [
+				"Webpack",
+				"Node.js",
+				"ReactJS",
+				"TypeScript",
+				"MySQL",
+				"Express JS",
+				"HTML",
+				"CSS",
+				"JavaScript",
+				"MongoDB"
+			]
 		},
 		{
 			"role": "Frontend Web Developer",
@@ -34,7 +70,15 @@
 			"bullets": [
 				"Responsible for the development of new highly-responsive, web-based user interface, reusable components."
 			],
-			"skills": ["Webpack", "Node.js", "ReactJS", "JavaScript", "HTML", "CSS", "Redux"]
+			"skills": [
+				"Webpack",
+				"Node.js",
+				"ReactJS",
+				"JavaScript",
+				"HTML",
+				"CSS",
+				"Redux"
+			]
 		},
 		{
 			"role": "Intern",
@@ -45,6 +89,14 @@
 			"bullets": [
 				"Full Stack Web Development along with Problem-Solving",
 				"Learn Data Structure and Algorithms."
+			],
+			"skills": [
+				"Node.js",
+				"ReactJS",
+				"JavaScript",
+				"HTML",
+				"CSS",
+				"Redux"
 			]
 		}
 	]
